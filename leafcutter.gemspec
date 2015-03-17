@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.files = ['lib/leafcutter.rb']
   s.homepage = 'http://rubygems.org/gems/leafcutter'
   s.license = 'MIT'
-  s.add_development_dependency 'json', '~> 1.8.2'
-  s.add_development_dependency 'rspec', '~> 3.2.0'
+  s.add_development_dependency 'json', '~> 1.8'
+  s.add_development_dependency 'rspec', '~> 3.2'
 end
