@@ -19,11 +19,9 @@ class Leafcutter
   def explore_branch data, key, params
     branch = params[key]
 
-    puts "Exploring branch: #{key}:#{branch.inspect}"
-
     value = data[key][branch]
     if value == nil
-      raise "Error on #{branch} with keys: #{data.keys.inspect}"
+      raise "Error on #{key}. Expecting to explore #{data.keys} on branch '#{branch}'"
     end
 
     # If value is an array, return - we've found a leaf

@@ -1,0 +1,64 @@
+{
+  "tag": {
+    "": {
+      "international": {
+        "false": {
+          "owner": {
+            "": {
+              "promoted": {
+                "false": ["A", "B", "C", "D", "E"],
+                "true": ["G", "A", "B", "C", "D", "F"]
+              }
+            },
+            "admin": {
+              "promoted": {
+                "false": ["A", "C", "B", "D", "E"],
+                "true": ["G", "A", "C", "B", "D", "H", "F"]
+              }
+            },
+            "public": {
+              "promoted": {
+                "false": ["B", "D", "A", "C", "E"],
+                "true": ["B", "D", "I", "A", "C", "F"]
+              }
+            }
+          }
+        },
+        "true": {
+          "owner": {
+            "": {
+              "promoted": {
+                "true": ["A", "B", "G", "D"],
+                "false": ["A", "B", "C", "D"]
+              }
+            },
+            "admin": {
+              "promoted": {
+                "true": ["A", "B", "G", "C", "D", "I"],
+                "false": ["A", "B", "C", "D"]
+              }
+            },
+            "public": {
+              "promoted": {
+                "true": ["B", "A", "D", "I", "C"],
+                "false": ["B", "A", "D", "C"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "upcoming": {
+      "international": {
+        "false": {
+          "owner": {
+            "": ["C", "D", "A", "B", "E"],
+            "admin": ["C", "D", "A", "B", "E"],
+            "public": ["D", "C", "B", "A", "E"]
+          }
+        },
+        "true": ["C", "D", "A", "B"]
+      }
+    }
+  }
+}
