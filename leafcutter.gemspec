@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.authors = ['Peter Hastie']
   s.email = 'pete@sillypog.com'
   s.files = ['lib/leafcutter.rb']
-  s.homepage = 'http://rubygems.org/gems/leafcutter'
+  s.homepage = 'https://github.com/sillypog/leafcutter'
   s.license = 'MIT'
   s.add_development_dependency 'json', '~> 1.8'
   s.add_development_dependency 'rspec', '~> 3.2'
