@@ -1,0 +1,15 @@
+{
+  "root": {
+    "true": {
+      "condition1": {
+        "true": ["A", "B", "C"],
+        "false": ["D", "E", "F"]
+      },
+      "condition2": {
+        "true": ["A", "B", "C"],
+        "false": ["D", "E", "F"]
+      }
+    },
+    "false": ["A", "B", "C"]
+  }
+}

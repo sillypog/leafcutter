@@ -3,6 +3,15 @@ class Leafcutter
     @data = json
   end
 
+  def validate
+    status = { valid: true, errors: [] }
+
+    # This is like run except we don't know which routes we want
+    # Instead we want to explore all branches and report all the errors we find
+
+    return validate_branch @data, :condition, status
+  end
+
   def run(params)
     keys = @data.keys
 
@@ -15,6 +24,37 @@ class Leafcutter
   end
 
   private
+
+  def validate_branch data, node_type, status
+    keys = data.kind_of?(Hash) ? data.keys : []
+
+    unless keys.empty?
+      if node_type == :condition && keys.length > 1
+        status[:valid] = false
+        status[:errors].push('multiple_conditions')
+      elsif node_type == :option && keys.length < 2
+        status[:valid] = false
+        status[:errors].push('single_option')
+      end
+
+      keys.each do |key|
+        next_node_type = node_type == :condition ? :option : :condition
+        validate_branch data[key], next_node_type, status
+      end
+    else
+      if data.kind_of?(Array)
+        if data.empty?
+          status[:valid] = false
+          status[:errors].push('empty_leaf')
+        end
+      else
+        status[:valid] = false
+        status[:errors].push('non_array_leaf')
+      end
+    end
+
+    return status
+  end
 
   def explore_branch data, key, params
     branch = params[key]

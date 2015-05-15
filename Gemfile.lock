@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    leafcutter (0.0.1)
+    leafcutter (0.0.3)
 
 GEM
   remote: https://rubygems.org/

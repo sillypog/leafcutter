@@ -1,0 +1,10 @@
+{
+  "root": {
+    "true": {
+      "condition1": {
+        "true": ["A", "B", "C"]
+      }
+    },
+    "false": ["A", "B", "C"]
+  }
+}
