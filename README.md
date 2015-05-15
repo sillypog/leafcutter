@@ -1,4 +1,4 @@
-# leafcutter
+# leafcutter [![Build Status](https://travis-ci.org/sillypog/leafcutter.svg?branch=master)](https://travis-ci.org/sillypog/leafcutter)
 Find leaves in tree-like json structures
 
 The JSON data structure must satisfy these conditions:
