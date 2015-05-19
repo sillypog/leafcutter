@@ -91,7 +91,26 @@ describe Leafcutter do
         expect(@status[:valid]).to be_falsey
       end
 
-      it 'should return status object with non_array_leaf error' do
+      it 'should return status object with empty_leaf error' do
+        expect(@status[:errors]).not_to be_empty
+        expect(@status[:errors].length).to eq(1)
+        expect(@status[:errors][0]).to eq('empty_leaf')
+      end
+    end
+
+    context 'with invalid data due to empty string in leaf node' do
+      before :each do
+        json = JSON.parse(File.read('./spec/fixtures/invalid_empty_string_leaf.json'))
+
+        leafcutter = Leafcutter.new json
+        @status = leafcutter.validate
+      end
+
+      it 'should return invalid status object' do
+        expect(@status[:valid]).to be_falsey
+      end
+
+      it 'should return status object with empty_leaf error' do
         expect(@status[:errors]).not_to be_empty
         expect(@status[:errors].length).to eq(1)
         expect(@status[:errors][0]).to eq('empty_leaf')

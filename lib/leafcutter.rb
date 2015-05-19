@@ -43,6 +43,7 @@ class Leafcutter
       end
     else
       if data.kind_of?(Array)
+        data.map!{ |d| d == '' ? nil : d }.compact! # Remove nils and empty strings
         if data.empty?
           status[:valid] = false
           status[:errors].push('empty_leaf')
