@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'leafcutter'
-  s.version = '0.0.3'
-  s.date = '2015-05-15'
+  s.version = '0.0.4'
+  s.date = '2015-05-19'
   s.summary = 'Find leaves in tree-like json structures'
   s.authors = ['Peter Hastie']
   s.email = 'pete@sillypog.com'
