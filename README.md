@@ -1,4 +1,4 @@
-# leafcutter ![Build Status](https://github.com/sillypog/leafcutter/actions/workflows/test.yml/badge.svg?branch=master)
+# leafcutter ![Build Status](https://github.com/sillypog/leafcutter/actions/workflows/test.yml/badge.svg?branch=main)
 
 Find leaves in tree-like json structures
 
